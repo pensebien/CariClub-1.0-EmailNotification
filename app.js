@@ -93,7 +93,7 @@ cron.schedule('0 12 * * *', async() => {
 
     async function getAndLogUsersSignedUpDaysAgo() {
         try {
-            var emmaEmail = "emma.awokoya.work@gmail.com"; // Email to send to
+            // var emmaEmail = "emma.awokoya.work@gmail.com"; // Email to send to
 
             const users = await getUsersSignedUpDaysAgo();
             console.log("The users not activated account", users);
@@ -141,9 +141,9 @@ cron.schedule('0 12 * * *', async() => {
                         await pool.execute(updateQuery, [user.UserID]);
 
                         // If the user's email matches emmaEmail, send another email
-                        if (user.WorkEmail == emmaEmail || user.PersonalEmail == emmaEmail) {
-                            await sendEmail(user, interval);
-                        }
+                        // if (user.WorkEmail == emmaEmail || user.PersonalEmail == emmaEmail) {
+                        //     await sendEmail(user, interval);
+                        // }
 
                         // Update the interval map with the last email sent date for the user
                         intervalMap.set(user.UserID, daysSinceActivation);
