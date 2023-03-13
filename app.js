@@ -158,12 +158,7 @@ cron.schedule('0 12 * * *', async() => {
         }
     }
 
-
-
-
-
     getAndLogUsersSignedUpDaysAgo();
-
 
     // Log end of the job
     console.log('Cron job finished at 12:00 PM');
@@ -173,16 +168,3 @@ cron.schedule('0 12 * * *', async() => {
     const logMessage = `Cron job finished at 12:00 PM\n`;
     fs.appendFileSync(logFilePath, logMessage);
 });
-// Where it can be improve
-// 1. Check for users that ever activated their account
-// [Careful not to send to already employee]
-// 2. Add ReferralID to get the name of the person that 
-// referred the user with a message in the email marketing bit
-// Stating that the Referer is waiting for the user
-// OrgID, LastLogin can also be used to contrust the email. 
-// -- We could use this as follow email maybe after a few days
-// Log when the cron was run successfully
-// then use that as a date metrics to check
-// when to transfer DB from DB1 to DB2
-// Use that last cron job run date as a metric to know 
-// know which date to retrieve the last log Users.

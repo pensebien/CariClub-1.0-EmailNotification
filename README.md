@@ -24,8 +24,3 @@ For running the Client app on local machine, follow these steps:
 ### Improvement
 1. Add ReferralID to get the name of the person that referred the user. This can be used to add more personalization in the **SendGrid Dynamic Template** email campaign. 
 2. Use OrgID and LastLogin to construct the email, and send follow-up emails after a few days.
-
-
-
-
-Regenerate response
